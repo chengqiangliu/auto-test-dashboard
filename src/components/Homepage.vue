@@ -21,12 +21,16 @@ import ErrorClassListVue from './ErrorClassList.vue';
         <BreadCrumbsVue></BreadCrumbsVue>
       </el-row>
       </el-col>
-     
-      <div class="Stats">
-       
-    <Suspense><TestDuration></TestDuration></Suspense>
+
+      <el-space  style="width: auto" justify="center" :size="30" direction="horizontal" wrap=true> 
+        <el-space style="width: 20"></el-space>
+        <Suspense><TestDuration></TestDuration></Suspense>
     <Suspense><TestPassComponentVue></TestPassComponentVue></Suspense>
       <Suspense><logStatsVue></logStatsVue></Suspense>
+  </el-space>
+      <div class="Stats">
+       
+    
     </div> 
 
   <el-col>
@@ -57,7 +61,11 @@ import ErrorClassListVue from './ErrorClassList.vue';
   .el-col{
     margin: 13px;
   }
-
+  .el-space{
+    display: flex;
+    justify-content: center;
+  
+  }
   .Stats{
     display: grid;
     grid-template-columns: auto auto auto;
