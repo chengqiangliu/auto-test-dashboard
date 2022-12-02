@@ -15,15 +15,13 @@ let b=ref();
    b.value = data[89]['id']; // this will be a string
  });
 
-
-
 const data = {
   datasets: [{
     
-    data: [b,b],
+    data: [b['_value'],100-b['_value']],
     backgroundColor: [
-      'rgb(118, 255, 100)',
-      'rgb(250, 71, 55)'
+      '#67C23A',
+      '#F56C6C'
     ],
     hoverOffset: 4,
     innerWidth:1,
@@ -52,8 +50,8 @@ const config = {
 <template>
     <div class="TestDuration">
     <el-row>
-    <el-col :span="8"></el-col>
-    <el-col :span="8"><h3>Test Pass %</h3>
+    <el-col :span="9"></el-col>
+    <el-col :span="7"><h4>Test Pass %</h4>
     
     </el-col>
     <el-col :span="8"></el-col>
@@ -84,11 +82,11 @@ const config = {
     width:350px;
     height:300px;
     border-radius: 5px;
-    box-shadow: 1px 1px 1px 1px lightgray;
+    box-shadow: 1px 1px 5px 1px rgb(223, 242, 255);
 
 }
-h3{
-    font-family: sans-serif;
+h4{
+    font-family:sans-serif;
     color: darkcyan;
 }
 </style>

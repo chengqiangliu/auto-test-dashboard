@@ -2,18 +2,21 @@
 import { Chart } from 'chart.js';
 import { onMounted } from 'vue';
 const data = {
-  labels: ['Tests Passed','Tests Failed','Tests Skipped',],
+  labels: ['Tests Passed','Tests Failed','Tests Skipped','Test Coverage'],
   datasets: [{
     label: '',
-    data: [65, 59, 80, 81, 56, 55, 40],
+    data: [65, 59, 80, 81, 100],
     backgroundColor: [
-      'rgba(255, 99, 132, 0.2)',
-      'rgba(255, 159, 64, 0.2)',
-      'rgba(255, 205, 86, 0.2)',
-      'rgba(75, 192, 192, 0.2)',
+      '#67C23A',
+      '#F56C6C',
+      '#E6A23C',
+      '#409EFF',
  
     ],
-    borderWidth: 1
+    borderWidth: 1,
+    barThickness: 18,
+    borderRadius:4
+
   }]
 };
 
@@ -51,13 +54,14 @@ onMounted(()=>{
   </div>
 </template>
 
-<style>
+<style scoped>
 .logStats{
 background-color: white;
-height: 300px;
+height: 280px;
 width:600px;
 border-radius: 5px;
-box-shadow: 1px 1px 1px 1px lightgray;
+box-shadow: 1px 1px 5px 1px rgb(223, 242, 255);
+padding: 10px;
 
 }
 
