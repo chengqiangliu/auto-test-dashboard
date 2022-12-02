@@ -23,17 +23,16 @@ import ErrorClassListVue from './ErrorClassList.vue';
       </el-col>
      
       <div class="Stats">
-        <el-row :guttered=20 justify="start">
-    <el-col :span="6"><Suspense><TestDuration></TestDuration></Suspense></el-col>
-    <el-col :span="6"><Suspense><TestPassComponentVue></TestPassComponentVue></Suspense></el-col>
-     <el-col :span="6"><Suspense><logStatsVue></logStatsVue></Suspense></el-col> 
-          
-  </el-row>
+       
+    <Suspense><TestDuration></TestDuration></Suspense>
+    <Suspense><TestPassComponentVue></TestPassComponentVue></Suspense>
+      <Suspense><logStatsVue></logStatsVue></Suspense>
+    </div> 
 
   <el-col>
     <Suspense><ErrorClassListVue></ErrorClassListVue></Suspense>
   </el-col>
-      </div>
+
     </div>
     
 </template>
@@ -57,5 +56,15 @@ import ErrorClassListVue from './ErrorClassList.vue';
   }
   .el-col{
     margin: 13px;
+  }
+
+  .Stats{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 10px;
+    padding: 20px;
+  
   }
 </style>
