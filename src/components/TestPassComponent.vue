@@ -49,25 +49,19 @@ const config = {
 
 <template>
     <div class="TestDuration">
-    <el-row>
-    <el-col :span="9"></el-col>
-    <el-col :span="7"><h4>Test Pass %</h4>
+
     
-    </el-col>
-    <el-col :span="8"></el-col>
-    </el-row>
+    <el-space> <el-col><h4>Test Passed %</h4></el-col></el-space>
+    
     <el-row>
         
     </el-row>
     
-    <el-row justify="center">
+    <el-space>
         
-    <el-col :span="14"><canvas id="myChart"></canvas></el-col>
-    </el-row>
-
-    <el-row>
-
-    </el-row>
+    <canvas id="myChart">
+    </canvas>
+    </el-space>
     
    
     </div>
@@ -77,9 +71,14 @@ const config = {
 
 
 <style scoped>
+
+.el-space{
+    display: flex;
+    justify-content: center;
+  }
 .TestDuration{
     background-color: white;
-    width:350px;
+    width: max-content;
     height:300px;
     border-radius: 5px;
     box-shadow: 1px 1px 5px 1px rgb(223, 242, 255);

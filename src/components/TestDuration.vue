@@ -82,6 +82,8 @@ await fetch('https://jsonplaceholder.typicode.com/todos')
     flex-direction: row;
     gap: 10px;
 }
+
+
 .number{
     display: flex;
     flex-direction: column;
