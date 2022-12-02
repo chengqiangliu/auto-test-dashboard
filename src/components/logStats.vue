@@ -58,7 +58,7 @@ onMounted(()=>{
 .logStats{
 background-color: white;
 height: 280px;
-width:500px;
+width:600px;
 border-radius: 5px;
 box-shadow: 1px 1px 5px 1px rgb(223, 242, 255);
 padding: 10px;

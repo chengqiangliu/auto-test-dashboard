@@ -22,10 +22,12 @@ import ErrorClassListVue from './ErrorClassList.vue';
       </el-row>
       </el-col>
       <el-row></el-row>
-      <el-space  style="width: auto" justify="center" direction="horizontal" wrap=true> 
-      <Suspense><TestDuration></TestDuration></Suspense>
+      <el-space  style="width: auto" justiy="center" direction="horizontal"> 
+          <Suspense><TestDuration></TestDuration></Suspense>
       <Suspense><TestPassComponentVue></TestPassComponentVue></Suspense>
       <Suspense><logStatsVue></logStatsVue></Suspense>
+
+     
   </el-space>
       <div class="Stats">
        
@@ -61,6 +63,8 @@ import ErrorClassListVue from './ErrorClassList.vue';
   .el-space{
     display: flex;
     justify-content: center;
+    gap:20px
+    
   }
   .Stats{
     width:fit-content;
