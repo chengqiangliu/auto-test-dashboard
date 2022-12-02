@@ -75,11 +75,13 @@ const config = {
 .el-space{
     display: flex;
     justify-content: center;
+    align-items: center;
   }
 .TestDuration{
     background-color: white;
     width: max-content;
     height:300px;
+    width: 300px;
     border-radius: 5px;
     box-shadow: 1px 1px 5px 1px rgb(223, 242, 255);
 
