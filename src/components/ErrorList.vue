@@ -1,9 +1,5 @@
 <template>
-    <div class="head">
-        <h2>&nbsp Error Class</h2>
-           
-    </div>
-    <br>
+
     <div class="errorList">
 
         <div v-for="bees in b">

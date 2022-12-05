@@ -10,7 +10,10 @@
     <BreadCrumbsVue></BreadCrumbsVue>
   </el-row>
   <el-row>
-    {{errorName}}
+     <h3> Class ID:{{errorName['myprop']}}</h3>
+  </el-row>
+  <el-row>
+
   </el-row>
   </el-col>
   <Suspense><ErrorList></ErrorList></Suspense>
@@ -22,7 +25,6 @@
 import DashboardHeaderVue from './DashboardHeader.vue';
 import BreadCrumbsVue from './BreadCrumbs.vue';
 import ErrorList from './ErrorList.vue'
-import { defineProps } from 'vue';
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
 import { useRoute } from 'vue-router';
@@ -36,6 +38,10 @@ let errorName=ref(ro.params)
 </script>
 
 <style>
+
+.el-row h3{
+    font-family: sans-serif;
+}
 .el-row{
     margin: 10px;
   }

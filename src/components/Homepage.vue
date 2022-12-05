@@ -11,34 +11,24 @@ import ErrorClassListVue from './ErrorClassList.vue';
 <template>
     
     <div class="Page">
-    
+
         <DashboardHeaderVue></DashboardHeaderVue>
-      <el-row>
-        
-      </el-row>
-      <el-col>
-        <el-row>
-        <BreadCrumbsVue></BreadCrumbsVue>
-      </el-row>
-      </el-col>
-      <el-row></el-row>
-      <el-space  justiy="center" direction="horizontal"> 
-          <Suspense><TestDuration></TestDuration></Suspense>
+      <div><br></div>
+       <div>
+         <BreadCrumbsVue>/</BreadCrumbsVue>
+       </div>
+      <div class="Stats">
+        <Suspense><TestDuration></TestDuration></Suspense>
       <Suspense><TestPassComponentVue></TestPassComponentVue></Suspense>
       <Suspense><logStatsVue></logStatsVue></Suspense>
+      </div>
 
-     
-  </el-space>
-      <div class="Stats">
-       
     
     </div> 
 
   <el-col>
     <Suspense><ErrorClassListVue></ErrorClassListVue></Suspense>
   </el-col>
-
-    </div>
     
 </template>
 
@@ -61,13 +51,14 @@ import ErrorClassListVue from './ErrorClassList.vue';
   }
  
   .el-space{
-    display: flex;
-    justify-content: center;
-    gap:20px
+  
     
   }
   .Stats{
-    width:fit-content;
-    padding: 10px;
+    display: flex;
+    padding: 20px;
+    gap: 10px;
+    justify-content: center;
+    flex-direction: row;
   }
 </style>
