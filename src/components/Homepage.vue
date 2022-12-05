@@ -22,7 +22,7 @@ import ErrorClassListVue from './ErrorClassList.vue';
       </el-row>
       </el-col>
       <el-row></el-row>
-      <el-space  style="width: auto" justiy="center" direction="horizontal"> 
+      <el-space  justiy="center" direction="horizontal"> 
           <Suspense><TestDuration></TestDuration></Suspense>
       <Suspense><TestPassComponentVue></TestPassComponentVue></Suspense>
       <Suspense><logStatsVue></logStatsVue></Suspense>

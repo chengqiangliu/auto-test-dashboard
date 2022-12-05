@@ -4,13 +4,17 @@ const routes = [
     {
         path:'/',
         name:"Home",
-        component:()=>import('../components/Homepage.vue')
+        component:()=>import('../components/Homepage.vue'),
+        props: true,
+       
+
     },
 
     {
-        path:'/classErrorList/',
-        name:"classErrorList",
-        component:()=>import('../components/ClassErrorPage.vue')
+        path:'/classErrorPage/:myprop',
+        name:"classErrorPage",
+        component:()=>import('../components/ClassErrorPage.vue'),
+        props: true,
     },
 
     // {

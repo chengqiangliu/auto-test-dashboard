@@ -1,6 +1,6 @@
 <template>
     <div class="head">
-        <h2>&nbsp Error Log</h2>
+        <h2>&nbsp Error Class</h2>
            
     </div>
     <br>
@@ -19,7 +19,7 @@
               </div>
 
                 <div class="errorClass">
-                    <h4><router-link :to="{ name: 'classErrorPage', params: { myprop: 1 }}">Error Class {{bees['id']}}</router-link> </h4>    
+                    <h4><router-link to="/classErrorList/">Error {{bees['id']}}</router-link> </h4>    
                 </div>
                 <div class="space2">
                 </div>
@@ -50,19 +50,21 @@ let b=ref();
   }).then(function(data) {
     b.value = data; 
   });
-  
 
+  const props=defineProps({
+      className: String
+  })
 </script>
 <style scoped>
     h2{
         
-        color: white;
+        color: black;
         font-size: large ;
         font-family: sans-serif;
     }
     .head{
         box-sizing: border-box;
-        background-color: #409EFF;
+        background-color: whitesmoke;
         padding: 0.3%;
         border-radius: 2px;
     }
