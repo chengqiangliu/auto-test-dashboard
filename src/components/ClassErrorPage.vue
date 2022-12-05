@@ -1,16 +1,12 @@
 <template>
     <div class="Page">
-
     <DashboardHeaderVue></DashboardHeaderVue>
-  <el-row>
-    
-  </el-row>
   <el-col>
     <el-row>
-    <BreadCrumbsVue></BreadCrumbsVue>
+    <ClassErrorPageBreadCrumbsVue></ClassErrorPageBreadCrumbsVue>
   </el-row>
   <el-row>
-     <h3> Class ID:{{errorName['myprop']}}</h3>
+     <h3> Class ID:{{errorName['errorClassId']}}</h3>
   </el-row>
   <el-row>
 
@@ -23,7 +19,7 @@
 
 <script setup>
 import DashboardHeaderVue from './DashboardHeader.vue';
-import BreadCrumbsVue from './BreadCrumbs.vue';
+import ClassErrorPageBreadCrumbsVue from './ClassErrorPageBreadCrumbs.vue';
 import ErrorList from './ErrorList.vue'
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';

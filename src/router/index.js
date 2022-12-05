@@ -11,17 +11,18 @@ const routes = [
     },
 
     {
-        path:'/classErrorPage/:myprop',
+        path:'/classErrorPage/:errorClassId',
         name:"classErrorPage",
         component:()=>import('../components/ClassErrorPage.vue'),
         props: true,
     },
 
-    // {
-    //     path:'/errorLog/',
-    //     name:"errorLog",
-    //     component:()=>import('../components/ErrorDetailPage.vue')
-    // },
+    {
+        path:'/errorLog/:errorDetails',
+        name:"errorLog",
+        component:()=>import('../components/ErrorDetailPage.vue'),
+        props: true
+    },
    
    
 ]

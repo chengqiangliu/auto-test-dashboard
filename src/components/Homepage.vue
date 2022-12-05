@@ -1,7 +1,7 @@
 <script setup>
 import DashboardHeaderVue from './DashboardHeader.vue';
 import Sidebar from './Sidebar.vue'
-import BreadCrumbsVue from './BreadCrumbs.vue';
+import BreadCrumbsVue from './HomePageBreadCrumbs.vue';
 import TestDuration from './TestDuration.vue'
 import TestPassComponentVue from './TestPassComponent.vue';
 import logStatsVue from './logStats.vue';
@@ -13,10 +13,9 @@ import ErrorClassListVue from './ErrorClassList.vue';
     <div class="Page">
 
         <DashboardHeaderVue></DashboardHeaderVue>
-      <div><br></div>
-       <div>
+       <el-row>
          <BreadCrumbsVue>/</BreadCrumbsVue>
-       </div>
+       </el-row>
       <div class="Stats">
       <Suspense><TestDuration></TestDuration></Suspense>
       <Suspense><TestPassComponentVue></TestPassComponentVue></Suspense>

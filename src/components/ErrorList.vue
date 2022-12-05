@@ -15,7 +15,7 @@
               </div>
 
                 <div class="errorClass">
-                    <h4><router-link to="/classErrorList/">Error {{bees['id']}}</router-link> </h4>    
+                    <h4><router-link :to="{name: 'errorLog', params :{errorDetails:{errClass: className, errorId: errId}}}">Error {{bees['id']}}</router-link> </h4>    
                 </div>
                 <div class="space2">
                 </div>
@@ -36,10 +36,11 @@
     
 </template>
 <script setup>
-import {ref} from 'vue';
-
+import {onMounted, ref} from 'vue';
 
 let b=ref(); 
+
+let errId=ref(2);
   await fetch('https://jsonplaceholder.typicode.com/todos')
   .then(function(response) {
     return response.json();
@@ -47,9 +48,14 @@ let b=ref();
     b.value = data; 
   });
 
-  const props=defineProps({
+  const pro=defineProps({
       className: String
   })
+
+  let className=pro['errorClassId'];
+  
+
+
 </script>
 <style scoped>
     h2{

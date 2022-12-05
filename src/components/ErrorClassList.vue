@@ -19,7 +19,7 @@
               </div>
 
                 <div class="errorClass">
-                    <h4><router-link :to="{ name: 'classErrorPage', params: { myprop: 1 }}">Error Class {{bees['id']}}</router-link> </h4>    
+                    <h4><router-link :to="{ name: 'classErrorPage', params: {errorClassId: bees['id'] }}">Error Class {{bees['id']}}</router-link> </h4>    
                 </div>
                 <div class="space2">
                 </div>
