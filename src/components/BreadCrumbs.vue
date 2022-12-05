@@ -24,7 +24,6 @@
   <style scoped>
 .BreadCrumbs{
     font-family: sans-serif;
-    
 }
 
 </style>

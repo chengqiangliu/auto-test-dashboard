@@ -18,7 +18,7 @@ import ErrorClassListVue from './ErrorClassList.vue';
          <BreadCrumbsVue>/</BreadCrumbsVue>
        </div>
       <div class="Stats">
-        <Suspense><TestDuration></TestDuration></Suspense>
+      <Suspense><TestDuration></TestDuration></Suspense>
       <Suspense><TestPassComponentVue></TestPassComponentVue></Suspense>
       <Suspense><logStatsVue></logStatsVue></Suspense>
       </div>
@@ -41,20 +41,7 @@ import ErrorClassListVue from './ErrorClassList.vue';
   .el-row{
     margin: 10px;
   }
-  .placeholder{
-    background-color: black;
-    box-sizing: border-box;
-    height: 50px;
-    width: 50px;
-    justify-content: center;
-    align-items: center;
-  }
- 
-  .el-space{
-  
-    
-  }
-  .Stats{
+   .Stats{
     display: flex;
     padding: 20px;
     gap: 10px;

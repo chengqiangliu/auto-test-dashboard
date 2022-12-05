@@ -22,9 +22,6 @@
         </el-page-header>
 
             </el-col>
-            
- 
-        
     </div>
   </template>
   
