@@ -55,7 +55,7 @@ let b=ref();
 </script>
 <style scoped>
     h2{
-        
+        padding-left: 120px;
         color: white;
         font-size: large ;
         font-family: sans-serif;
@@ -67,6 +67,7 @@ let b=ref();
         border-radius: 2px;
     }
     .errorListBox{
+        padding-left: 120px;
         font-family: sans-serif;
         box-sizing: border-box;
         display: flex;

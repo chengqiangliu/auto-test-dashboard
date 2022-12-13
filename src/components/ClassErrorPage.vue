@@ -5,7 +5,7 @@
     <el-row>
     <ClassErrorPageBreadCrumbsVue></ClassErrorPageBreadCrumbsVue>
   </el-row>
-  <el-row>
+  <el-row class="classId">
      <h3> Class ID:{{errorName['errorClassId']}}</h3>
   </el-row>
   <el-row>
@@ -34,6 +34,9 @@ let errorName=ref(ro.params)
 </script>
 
 <style>
+.classId{
+  padding-left: 100px;
+}
 
 .el-row h3{
     font-family: sans-serif;

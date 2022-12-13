@@ -24,16 +24,27 @@
             </el-col>
     </div>
   </template>
+
+<script lang="ts" setup>
+import { Expand } from '@element-plus/icons-vue'
+
+import  Menu  from '../components/Menu.vue';
+
+
+</script>
+
   
 <style scoped>
 
 .header{
+    padding-left: 120px;
     background-color: #409EFF;
     height: 90px;
     border-radius: 2px;
 }
 .text{
     color: white;
+    align-items: flex-start;
 }
 
 .el-row{
@@ -52,7 +63,4 @@ margin: 30px;
 
 </style>
 
-  <script lang="ts" setup>
-  import { Expand } from '@element-plus/icons-vue'
-  </script>
   

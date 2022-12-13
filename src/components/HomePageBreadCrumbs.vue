@@ -6,7 +6,7 @@
 
     </el-row>
             <el-breadcrumb :separator-icon="ArrowRight">
-            <el-breadcrumb-item :to="{ path: '/' }">Dashboard</el-breadcrumb-item>
+            <el-breadcrumb-item  class="homepage"   :to="{ path: '/' }">Dashboard</el-breadcrumb-item>
             <el-breadcrumb-item></el-breadcrumb-item>
            
             </el-breadcrumb>
@@ -22,6 +22,10 @@
   </script>
   
   <style scoped>
+
+  .homepage{
+    padding-left: 120px;
+  }
 .BreadCrumbs{
     font-family: sans-serif;
 }
