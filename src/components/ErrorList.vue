@@ -2,7 +2,7 @@
 
     <div class="errorList">
 
-        <div v-for="bees in b">
+        <div v-for="bees in b" :key="bees.id">
         
             <div class="errorListBox">
                
@@ -15,7 +15,7 @@
               </div>
 
                 <div class="errorClass">
-                    <h4><router-link :to="{name: 'errorLog', params :{errorDetails:{errClass: className, errorId: errId}}}">Error {{bees['id']}}</router-link> </h4>    
+                    <h4 @click="onAboutClick(bees.id)">Error {{bees['id']}}</h4>    
                 </div>
                 <div class="space2">
                 </div>
@@ -36,9 +36,21 @@
     
 </template>
 <script setup>
+
 import {onMounted, ref} from 'vue';
 
+import router from '../router/index';
+
+
 let b=ref(); 
+
+
+
+
+const onAboutClick=(id)=>{
+    router.push({ name:'errorLog', params: {errorDetails: id } })
+    
+}
 
 let errId=ref(2);
   await fetch('https://jsonplaceholder.typicode.com/todos')
@@ -47,13 +59,6 @@ let errId=ref(2);
   }).then(function(data) {
     b.value = data; 
   });
-
-  const pro=defineProps({
-      className: String
-  })
-
-  let className=pro['errorClassId'];
-  
 
 
 </script>
